@@ -18,19 +18,15 @@ struct ContentView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
                     Image("Image")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .edgesIgnoringSafeArea(.top)
                 }
                 .frame(maxWidth: .infinity)
             }
             .navigationTitle("ARITZIA")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-//                ToolbarItem(placement: .principal) {
-//                    // MARK: Title
-//                    Text("ARITZIA")
-//                        .font(.title2)
-//                        .bold()
-//                }
-                
                 // MARK: Shopping Bag Icon
                 ToolbarItem {
                     Image(systemName: "bag")
