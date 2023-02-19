@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeScreen: View {
     
     init() {
-        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "Georgia-Bold", size: 20)!]
+        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "rische-demo", size: 30)!]
     }
     
     var body: some View {

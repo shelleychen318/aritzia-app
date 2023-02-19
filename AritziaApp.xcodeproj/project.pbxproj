@@ -12,6 +12,7 @@
 		7ABF1D3029A19A43001EC71C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ABF1D2F29A19A43001EC71C /* Assets.xcassets */; };
 		7ABF1D3329A19A43001EC71C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ABF1D3229A19A43001EC71C /* Preview Assets.xcassets */; };
 		7ABF1D3B29A1E39E001EC71C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF1D3A29A1E39E001EC71C /* HomeScreen.swift */; };
+		7ABF1D3E29A1EC8A001EC71C /* rische-demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7ABF1D3D29A1EC89001EC71C /* rische-demo.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		7ABF1D2F29A19A43001EC71C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ABF1D3229A19A43001EC71C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7ABF1D3A29A1E39E001EC71C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		7ABF1D3D29A1EC89001EC71C /* rische-demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rische-demo.otf"; sourceTree = "<group>"; };
+		7ABF1D3F29A1EE93001EC71C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +56,10 @@
 		7ABF1D2A29A19A41001EC71C /* AritziaApp */ = {
 			isa = PBXGroup;
 			children = (
+				7ABF1D3F29A1EE93001EC71C /* Info.plist */,
 				7ABF1D2B29A19A41001EC71C /* AritziaAppApp.swift */,
 				7ABF1D2D29A19A41001EC71C /* ContentView.swift */,
+				7ABF1D3C29A1EB34001EC71C /* Fonts */,
 				7ABF1D3929A1E384001EC71C /* Screens */,
 				7ABF1D2F29A19A43001EC71C /* Assets.xcassets */,
 				7ABF1D3129A19A43001EC71C /* Preview Content */,
@@ -76,6 +81,14 @@
 				7ABF1D3A29A1E39E001EC71C /* HomeScreen.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		7ABF1D3C29A1EB34001EC71C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7ABF1D3D29A1EC89001EC71C /* rische-demo.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +151,7 @@
 			files = (
 				7ABF1D3329A19A43001EC71C /* Preview Assets.xcassets in Resources */,
 				7ABF1D3029A19A43001EC71C /* Assets.xcassets in Resources */,
+				7ABF1D3E29A1EC8A001EC71C /* rische-demo.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +296,7 @@
 				DEVELOPMENT_TEAM = 63X4J5Y239;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AritziaApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -311,6 +326,7 @@
 				DEVELOPMENT_TEAM = 63X4J5Y239;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AritziaApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
