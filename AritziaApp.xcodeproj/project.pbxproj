@@ -13,6 +13,7 @@
 		7ABF1D3329A19A43001EC71C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ABF1D3229A19A43001EC71C /* Preview Assets.xcassets */; };
 		7ABF1D3B29A1E39E001EC71C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF1D3A29A1E39E001EC71C /* HomeScreen.swift */; };
 		7ABF1D3E29A1EC8A001EC71C /* rische-demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7ABF1D3D29A1EC89001EC71C /* rische-demo.otf */; };
+		7ABF1D4429A1F5F1001EC71C /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ABF1D4329A1F5F1001EC71C /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7ABF1D3A29A1E39E001EC71C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		7ABF1D3D29A1EC89001EC71C /* rische-demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rische-demo.otf"; sourceTree = "<group>"; };
 		7ABF1D3F29A1EE93001EC71C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7ABF1D4329A1F5F1001EC71C /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				7ABF1D3D29A1EC89001EC71C /* rische-demo.otf */,
+				7ABF1D4329A1F5F1001EC71C /* Poppins-SemiBold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ABF1D3329A19A43001EC71C /* Preview Assets.xcassets in Resources */,
+				7ABF1D4429A1F5F1001EC71C /* Poppins-SemiBold.ttf in Resources */,
 				7ABF1D3029A19A43001EC71C /* Assets.xcassets in Resources */,
 				7ABF1D3E29A1EC8A001EC71C /* rische-demo.otf in Resources */,
 			);

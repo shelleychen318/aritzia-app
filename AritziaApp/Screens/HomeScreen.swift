@@ -24,7 +24,6 @@ struct HomeScreen: View {
             .navigationTitle("ARITZIA")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                // MARK: Shopping Bag Icon
                 ToolbarItem {
                     Image(systemName: "bag")
                 }
@@ -43,8 +42,7 @@ struct ImageOverlay: View {
     var body: some View {
         ZStack {
             Text("Shop Everyday Luxury")
-                .font(.system(size: 48))
-                .bold()
+                .font(Font.custom("Poppins-SemiBold", size: 44))
 //                .padding(16)
                 .position(x:190, y:530)
                 .foregroundColor(.white)
