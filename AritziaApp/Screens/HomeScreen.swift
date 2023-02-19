@@ -31,7 +31,7 @@ struct HomeScreen: View {
             }
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
-                    HStack(spacing: 60) {
+                    HStack(spacing: 80) {
                         Image(systemName: "tshirt")
                         Image(systemName: "heart")
                         Image(systemName: "person")
