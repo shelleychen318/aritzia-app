@@ -18,14 +18,27 @@ struct HomeScreen: View {
             ScrollView {
                 VStack {
                     Banner()
+                    
                 }
                 .padding([.top], 5)
+                
             }
             .navigationTitle("ARITZIA")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem {
                     Image(systemName: "bag")
+                        .font(Font.title3.weight(.regular))
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    HStack(spacing: 60) {
+                        Image(systemName: "basket")
+                        Image(systemName: "heart")
+                        Image(systemName: "person")
+                    }
+                    .font(Font.title3.weight(.regular))
                 }
             }
         }
@@ -53,7 +66,7 @@ struct ImageOverlay: View {
 
 struct Banner: View {
     var body: some View {
-        Image("Image")
+        Image("BannerImage")
             .resizable()
             .aspectRatio(contentMode: .fill)
             .edgesIgnoringSafeArea(.all)
