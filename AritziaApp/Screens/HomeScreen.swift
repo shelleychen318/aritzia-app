@@ -18,27 +18,25 @@ struct HomeScreen: View {
             ScrollView {
                 VStack {
                     Banner()
-                    
                 }
                 .padding([.top], 5)
-                
             }
             .navigationTitle("ARITZIA")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem {
                     Image(systemName: "bag")
-                        .font(Font.title3.weight(.regular))
+                        .font(Font.title3)
                 }
             }
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
                     HStack(spacing: 60) {
-                        Image(systemName: "basket")
+                        Image(systemName: "tshirt")
                         Image(systemName: "heart")
                         Image(systemName: "person")
                     }
-                    .font(Font.title3.weight(.regular))
+                    .font(Font.title3)
                 }
             }
         }
@@ -56,10 +54,9 @@ struct ImageOverlay: View {
         ZStack {
             Text("Shop Everyday Luxury")
                 .font(Font.custom("Poppins-SemiBold", size: 44))
-//                .padding(16)
-                .position(x:190, y:530)
+                .padding(24)
+                .position(x: 190, y: 500)
                 .foregroundColor(.white)
-                .frame(maxWidth: .infinity)
         }
     }
 }
