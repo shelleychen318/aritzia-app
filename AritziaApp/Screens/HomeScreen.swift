@@ -7,18 +7,6 @@
 
 import SwiftUI
 
-struct ImageOverlay: View {
-    var body: some View {
-        ZStack {
-            Text("Shop Everyday Luxury")
-                .font(.system(size: 48))
-                .bold()
-                .padding(12)
-                .foregroundColor(.white)
-        }
-    }
-}
-
 struct HomeScreen: View {
     
     init() {
@@ -28,15 +16,10 @@ struct HomeScreen: View {
     var body: some View {
         NavigationView {
             ScrollView {
-//                VStack {
-                    Image("Image")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .edgesIgnoringSafeArea(.top)
-                        .overlay(ImageOverlay(), alignment: .leading)
-//                }
+                VStack {
+                    Banner()
+                }
                 .padding([.top], 5)
-                .frame(maxWidth: .infinity)
             }
             .navigationTitle("ARITZIA")
             .navigationBarTitleDisplayMode(.inline)
@@ -53,5 +36,29 @@ struct HomeScreen: View {
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
         HomeScreen()
+    }
+}
+
+struct ImageOverlay: View {
+    var body: some View {
+        ZStack {
+            Text("Shop Everyday Luxury")
+                .font(.system(size: 48))
+                .bold()
+//                .padding(16)
+                .position(x:190, y:530)
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+        }
+    }
+}
+
+struct Banner: View {
+    var body: some View {
+        Image("Image")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .edgesIgnoringSafeArea(.all)
+            .overlay(ImageOverlay(), alignment: .leading)
     }
 }
