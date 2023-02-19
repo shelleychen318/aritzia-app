@@ -67,6 +67,6 @@ struct Banner: View {
             .resizable()
             .aspectRatio(contentMode: .fill)
             .edgesIgnoringSafeArea(.all)
-            .overlay(ImageOverlay(), alignment: .leading)
+            .overlay(ImageOverlay())
     }
 }
