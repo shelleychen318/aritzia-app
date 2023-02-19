@@ -7,6 +7,18 @@
 
 import SwiftUI
 
+struct ImageOverlay: View {
+    var body: some View {
+        ZStack {
+            Text("Shop Everyday Luxury")
+                .font(.system(size: 48))
+                .bold()
+                .padding(12)
+                .foregroundColor(.white)
+        }
+    }
+}
+
 struct ContentView: View {
     
     init() {
@@ -16,16 +28,18 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack(alignment: .leading, spacing: 24) {
+//                VStack {
                     Image("Image")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .edgesIgnoringSafeArea(.top)
-                }
+//                }
+                .padding([.top], 5)
                 .frame(maxWidth: .infinity)
             }
             .navigationTitle("ARITZIA")
             .navigationBarTitleDisplayMode(.inline)
+            .overlay(ImageOverlay(), alignment: .leading)
             .toolbar {
                 // MARK: Shopping Bag Icon
                 ToolbarItem {
