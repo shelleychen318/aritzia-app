@@ -12,13 +12,23 @@ struct ContentView: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
+                    
+                }
+                .padding()
+                .frame(maxWidth: .infinity)
+            }
+            .toolbar {
+                ToolbarItem(placement: .principal) {
                     // MARK: Title
                     Text("ARITZIA")
                         .font(.title2)
                         .bold()
                 }
-                .padding()
-                .frame(maxWidth: .infinity)
+                
+                // MARK: Shopping Bag Icon
+                ToolbarItem {
+                    Image(systemName: "bag")
+                }
             }
         }
     }
