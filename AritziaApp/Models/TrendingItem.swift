@@ -14,7 +14,7 @@ struct TrendingItem: Identifiable {
     var price: Int
 }
 
-var trendingItemsList = [TrendingItem(name: "Greek Sculpt Knit Tank", image: "trendingItem1", price: 58),
+var trendingItemsList = [TrendingItem(name: "Sculpt Tank", image: "trendingItem1", price: 58),
                          TrendingItem(name: "Pleated Pant", image: "trendingItem2", price: 148),
                          TrendingItem(name: "Fonda Dress", image: "trendingItem3", price: 128),
                          TrendingItem(name: "Forte Blazer", image: "trendingItem4", price: 198),

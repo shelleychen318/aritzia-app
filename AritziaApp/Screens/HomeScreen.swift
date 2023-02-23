@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct HomeScreen: View {
-    
-    private let categories = ["T-Shirts & Tops", "Pants", ]
-    
+        
     init() {
         UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "rische-demo", size: 30)!]
     }
@@ -21,6 +19,7 @@ struct HomeScreen: View {
                 VStack {
                     Banner()
                     CategoriesContainer()
+                    TrendingItemsContainer()
                 }
                 .padding([.top], 5)
             }
@@ -81,12 +80,32 @@ struct CategoriesContainer: View {
             Text("SHOP BY CATEGORY")
                 .font(.custom("Poppins-Regular", size: 18))
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding()
+                .padding([.top], 20)
             
             ScrollView (.horizontal) {
                 HStack {
                     ForEach(categoryList, id: \.id) { category in
                         CategoryCard(category: category)
+                    }
+                }
+            }
+        }
+        .padding(.leading)
+    }
+}
+
+struct TrendingItemsContainer: View {
+    var body: some View {
+        VStack {
+            Text("TRENDING")
+                .font(.custom("Poppins-Regular", size: 18))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding([.top], 40)
+            
+            ScrollView (.horizontal) {
+                HStack {
+                    ForEach(trendingItemsList, id: \.id) { trendingItem in
+                        TrendingItemCard(trendingItem: trendingItem)
                     }
                 }
             }

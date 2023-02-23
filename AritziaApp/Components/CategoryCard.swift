@@ -18,7 +18,7 @@ struct CategoryCard: View {
             Text(category.name)
                 .font(.custom("Poppins-Regular", size: 14))
         }
-        .frame(width: 180, height: 250)
+        .frame(width: 180, height: 300)
     }
 }
 
