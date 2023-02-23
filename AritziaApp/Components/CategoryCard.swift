@@ -14,10 +14,9 @@ struct CategoryCard: View {
         VStack(alignment: .leading) {
             Image(category.image)
                 .resizable()
-//                .frame(width: 180)
                 .scaledToFit()
             Text(category.name)
-                .font(.custom("Poppins-Regular", size: 15))
+                .font(.custom("Poppins-Regular", size: 14))
         }
         .frame(width: 180, height: 250)
     }

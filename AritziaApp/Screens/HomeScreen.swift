@@ -56,9 +56,9 @@ struct ImageOverlay: View {
     var body: some View {
         ZStack {
             Text("Shop Everyday Luxury")
-                .font(.custom("Poppins-SemiBold", size: 44))
+                .font(.custom("Poppins-SemiBold", size: 40))
                 .padding(24)
-                .position(x: 190, y: 500)
+                .position(x: 180, y: 500)
                 .foregroundColor(.white)
         }
     }
