@@ -15,7 +15,7 @@ struct HomeScreen: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
+            ScrollView (showsIndicators: false) {
                 VStack {
                     Banner()
                     CategoriesContainer()
@@ -82,7 +82,7 @@ struct CategoriesContainer: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding([.top], 20)
             
-            ScrollView (.horizontal) {
+            ScrollView (.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(categoryList, id: \.id) { category in
                         CategoryCard(category: category)
@@ -102,7 +102,7 @@ struct TrendingItemsContainer: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding([.top], 40)
             
-            ScrollView (.horizontal) {
+            ScrollView (.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(trendingItemsList, id: \.id) { trendingItem in
                         TrendingItemCard(trendingItem: trendingItem)
