@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeScreen: View {
     
+    private let categories = ["T-Shirts & Tops", "Pants", ]
+    
     init() {
         UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "rische-demo", size: 30)!]
     }

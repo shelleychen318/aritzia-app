@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A09F6B829A8018700B4A582 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A09F6B729A8018700B4A582 /* Category.swift */; };
+		7A09F6BB29A8031400B4A582 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A09F6BA29A8031400B4A582 /* CategoryCard.swift */; };
 		7ABF1D2C29A19A41001EC71C /* AritziaAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF1D2B29A19A41001EC71C /* AritziaAppApp.swift */; };
 		7ABF1D2E29A19A41001EC71C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF1D2D29A19A41001EC71C /* ContentView.swift */; };
 		7ABF1D3029A19A43001EC71C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ABF1D2F29A19A43001EC71C /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A09F6B729A8018700B4A582 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		7A09F6BA29A8031400B4A582 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 		7ABF1D2829A19A41001EC71C /* AritziaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AritziaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ABF1D2B29A19A41001EC71C /* AritziaAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AritziaAppApp.swift; sourceTree = "<group>"; };
 		7ABF1D2D29A19A41001EC71C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +43,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A09F6B629A8013800B4A582 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7A09F6B729A8018700B4A582 /* Category.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7A09F6B929A802FB00B4A582 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7A09F6BA29A8031400B4A582 /* CategoryCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		7ABF1D1F29A19A41001EC71C = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +78,8 @@
 		7ABF1D2A29A19A41001EC71C /* AritziaApp */ = {
 			isa = PBXGroup;
 			children = (
+				7A09F6B929A802FB00B4A582 /* Components */,
+				7A09F6B629A8013800B4A582 /* Models */,
 				7ABF1D3F29A1EE93001EC71C /* Info.plist */,
 				7ABF1D2B29A19A41001EC71C /* AritziaAppApp.swift */,
 				7ABF1D2D29A19A41001EC71C /* ContentView.swift */,
@@ -167,8 +189,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ABF1D2E29A19A41001EC71C /* ContentView.swift in Sources */,
+				7A09F6BB29A8031400B4A582 /* CategoryCard.swift in Sources */,
 				7ABF1D2C29A19A41001EC71C /* AritziaAppApp.swift in Sources */,
 				7ABF1D3B29A1E39E001EC71C /* HomeScreen.swift in Sources */,
+				7A09F6B829A8018700B4A582 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
