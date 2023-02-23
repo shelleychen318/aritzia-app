@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7A09F6B829A8018700B4A582 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A09F6B729A8018700B4A582 /* Category.swift */; };
 		7A09F6BB29A8031400B4A582 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A09F6BA29A8031400B4A582 /* CategoryCard.swift */; };
+		7A09F6BD29A8088900B4A582 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A09F6BC29A8088900B4A582 /* Poppins-Light.ttf */; };
+		7A09F6BF29A80ADA00B4A582 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A09F6BE29A80ADA00B4A582 /* Poppins-Regular.ttf */; };
 		7ABF1D2C29A19A41001EC71C /* AritziaAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF1D2B29A19A41001EC71C /* AritziaAppApp.swift */; };
 		7ABF1D2E29A19A41001EC71C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF1D2D29A19A41001EC71C /* ContentView.swift */; };
 		7ABF1D3029A19A43001EC71C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ABF1D2F29A19A43001EC71C /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		7A09F6B729A8018700B4A582 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		7A09F6BA29A8031400B4A582 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
+		7A09F6BC29A8088900B4A582 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		7A09F6BE29A80ADA00B4A582 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		7ABF1D2829A19A41001EC71C /* AritziaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AritziaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ABF1D2B29A19A41001EC71C /* AritziaAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AritziaAppApp.swift; sourceTree = "<group>"; };
 		7ABF1D2D29A19A41001EC71C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				7ABF1D3D29A1EC89001EC71C /* rische-demo.otf */,
+				7A09F6BC29A8088900B4A582 /* Poppins-Light.ttf */,
+				7A09F6BE29A80ADA00B4A582 /* Poppins-Regular.ttf */,
 				7ABF1D4329A1F5F1001EC71C /* Poppins-SemiBold.ttf */,
 			);
 			path = Fonts;
@@ -175,7 +181,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ABF1D3329A19A43001EC71C /* Preview Assets.xcassets in Resources */,
+				7A09F6BD29A8088900B4A582 /* Poppins-Light.ttf in Resources */,
 				7ABF1D4429A1F5F1001EC71C /* Poppins-SemiBold.ttf in Resources */,
+				7A09F6BF29A80ADA00B4A582 /* Poppins-Regular.ttf in Resources */,
 				7ABF1D3029A19A43001EC71C /* Assets.xcassets in Resources */,
 				7ABF1D3E29A1EC8A001EC71C /* rische-demo.otf in Resources */,
 			);

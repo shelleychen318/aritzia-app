@@ -20,6 +20,7 @@ struct HomeScreen: View {
             ScrollView {
                 VStack {
                     Banner()
+                    CategoriesContainer()
                 }
                 .padding([.top], 5)
             }
@@ -28,7 +29,7 @@ struct HomeScreen: View {
             .toolbar {
                 ToolbarItem {
                     Image(systemName: "bag")
-                        .font(Font.title3)
+                        .font(.title3)
                 }
             }
             .toolbar {
@@ -38,7 +39,7 @@ struct HomeScreen: View {
                         Image(systemName: "heart")
                         Image(systemName: "person")
                     }
-                    .font(Font.title3)
+                    .font(.title3)
                 }
             }
         }
@@ -55,7 +56,7 @@ struct ImageOverlay: View {
     var body: some View {
         ZStack {
             Text("Shop Everyday Luxury")
-                .font(Font.custom("Poppins-SemiBold", size: 44))
+                .font(.custom("Poppins-SemiBold", size: 44))
                 .padding(24)
                 .position(x: 190, y: 500)
                 .foregroundColor(.white)
@@ -70,5 +71,26 @@ struct Banner: View {
             .aspectRatio(contentMode: .fill)
             .edgesIgnoringSafeArea(.all)
             .overlay(ImageOverlay())
+            .padding(.bottom)
+    }
+}
+
+struct CategoriesContainer: View {
+    var body: some View {
+        VStack {
+            Text("SHOP BY CATEGORY")
+                .font(.custom("Poppins-Regular", size: 18))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+            
+            ScrollView (.horizontal) {
+                HStack {
+                    ForEach(categoryList, id: \.id) { category in
+                        CategoryCard(category: category)
+                    }
+                }
+            }
+        }
+        .padding(.leading)
     }
 }

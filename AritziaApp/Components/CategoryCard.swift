@@ -17,7 +17,7 @@ struct CategoryCard: View {
 //                .frame(width: 180)
                 .scaledToFit()
             Text(category.name)
-                .font(.subheadline)
+                .font(.custom("Poppins-Regular", size: 15))
         }
         .frame(width: 180, height: 250)
     }
