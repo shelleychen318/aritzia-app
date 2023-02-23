@@ -70,7 +70,7 @@ struct Banner: View {
             .aspectRatio(contentMode: .fill)
             .edgesIgnoringSafeArea(.all)
             .overlay(ImageOverlay())
-            .padding(.bottom)
+            .padding([.bottom], 40)
     }
 }
 
@@ -80,7 +80,6 @@ struct CategoriesContainer: View {
             Text("SHOP BY CATEGORY")
                 .font(.custom("Poppins-Regular", size: 18))
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding([.top], 20)
             
             ScrollView (.horizontal, showsIndicators: false) {
                 HStack {
@@ -91,6 +90,7 @@ struct CategoriesContainer: View {
             }
         }
         .padding(.leading)
+        .padding([.bottom], 40)
     }
 }
 
@@ -100,7 +100,6 @@ struct TrendingItemsContainer: View {
             Text("TRENDING")
                 .font(.custom("Poppins-Regular", size: 18))
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding([.top], 40)
             
             ScrollView (.horizontal, showsIndicators: false) {
                 HStack {
@@ -111,5 +110,6 @@ struct TrendingItemsContainer: View {
             }
         }
         .padding(.leading)
+        .padding([.bottom], 40)
     }
 }
