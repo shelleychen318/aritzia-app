@@ -39,6 +39,7 @@ struct ProductCard: View {
                     Circle()
                         .fill(Color(color))
                         .frame(width: 10, height: 10)
+                        .overlay(Circle().stroke(Color.black))
                 }
 
             }
