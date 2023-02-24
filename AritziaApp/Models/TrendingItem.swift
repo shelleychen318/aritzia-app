@@ -5,7 +5,7 @@
 //  Created by Shelley Chen on 2023-02-23.
 //
 
-import SwiftUI
+import Foundation
 
 struct TrendingItem: Identifiable {
     var id = UUID()
