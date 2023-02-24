@@ -21,7 +21,7 @@ struct HomeScreen: View {
                     CategoriesContainer()
                     TrendingItemsContainer()
                 }
-//                .padding([.top], 5)
+                .padding([.top], 5)
             }
             .navigationTitle("ARITZIA")
             .navigationBarTitleDisplayMode(.inline)
@@ -84,7 +84,10 @@ struct CategoriesContainer: View {
             ScrollView (.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(categoryList, id: \.id) { category in
-                        CategoryCard(category: category)
+                        NavigationLink(destination: ProductsScreen(),
+                                       label: { CategoryCard(category: category)}
+                        )
+                        .foregroundColor(.black)
                     }
                 }
             }
