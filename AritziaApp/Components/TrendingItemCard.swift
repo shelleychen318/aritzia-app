@@ -39,6 +39,6 @@ struct TrendingItemCard: View {
 
 struct TrendingItemCard_Previews: PreviewProvider {
     static var previews: some View {
-        TrendingItemCard(trendingItem: trendingItemsList[0])
+        TrendingItemCard(trendingItem: trendingItemsList[1])
     }
 }

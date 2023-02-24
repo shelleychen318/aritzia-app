@@ -21,7 +21,7 @@ struct HomeScreen: View {
                     CategoriesContainer()
                     TrendingItemsContainer()
                 }
-                .padding([.top], 5)
+//                .padding([.top], 5)
             }
             .navigationTitle("ARITZIA")
             .navigationBarTitleDisplayMode(.inline)
@@ -33,8 +33,8 @@ struct HomeScreen: View {
             }
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
-                    HStack(spacing: 80) {
-                        Image(systemName: "tshirt")
+                    HStack(spacing: 90) {
+                        Image(systemName: "house.fill")
                         Image(systemName: "heart")
                         Image(systemName: "person")
                     }
@@ -70,7 +70,7 @@ struct Banner: View {
             .aspectRatio(contentMode: .fill)
             .edgesIgnoringSafeArea(.all)
             .overlay(ImageOverlay())
-            .padding([.bottom], 40)
+            .padding([.bottom], 50)
     }
 }
 
@@ -90,7 +90,7 @@ struct CategoriesContainer: View {
             }
         }
         .padding(.leading)
-        .padding([.bottom], 40)
+        .padding([.bottom], 50)
     }
 }
 
@@ -110,6 +110,6 @@ struct TrendingItemsContainer: View {
             }
         }
         .padding(.leading)
-        .padding([.bottom], 20)
+        .padding([.bottom], 40)
     }
 }
