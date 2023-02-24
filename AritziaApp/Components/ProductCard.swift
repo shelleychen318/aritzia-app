@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProductCard: View {
+    // var categoryChoice: String
     var product: Product
         
     var body: some View {
@@ -20,10 +21,11 @@ struct ProductCard: View {
                 Text(product.name)
                     .font(.custom("Poppins-Regular", size: 14))
                 
+                Spacer()
+                
                 Button { }
                 label: {
                     Image(systemName: "heart")
-                        .frame(maxWidth: .infinity, alignment: .trailing)
                         .padding(0)
                         .foregroundColor(.black)
                         .font(.subheadline)
@@ -50,6 +52,8 @@ struct ProductCard: View {
 
 struct ProductCard_Previews: PreviewProvider {
     static var previews: some View {
+        //if statement to control which productList gets displayed according to category selection
+        
         ProductCard(product: productList[0])
     }
 }

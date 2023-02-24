@@ -16,7 +16,7 @@ struct Product: Identifiable {
     var colors: [UIColor]
 }
 
-var productList = [Product(name: "Top 1", image: "top1_0", price: 45, colors: [UIColor(rgb: 0xFFFFFF), UIColor.blue]),
+var productList = [Product(name: "Soho Longsleeve", image: "top1_0", price: 45, colors: [UIColor(rgb: 0xFFFFFF), UIColor(rgb: 0xfc855d)]),
                    Product(name: "Top 2", image: "top1_1", price: 45, colors: [UIColor.blue, UIColor.blue]),
                    Product(name: "Top 3", image: "top1_2", price: 45, colors: [UIColor.blue, UIColor.blue])]
 
