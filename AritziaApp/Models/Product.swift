@@ -6,16 +6,17 @@
 //
 
 import Foundation
+import UIKit
 
 struct Product: Identifiable {
     var id = UUID()
     var name: String
     var image: String
     var price: Int
-    var colors: [Int]
+    var colors: [UIColor]
 }
 
-var productList = [Product(name: "Soho Longsleeve", image: "top1_0", price: 45, colors: [0xFF0000, 0xFF0000]),
-                   Product(name: "Soho Longsleeve", image: "top1_1", price: 45, colors: [0xFF0000, 0xFF0000]),
-                   Product(name: "Soho Longsleeve", image: "top1_2", price: 45, colors: [0xFF0000, 0xFF0000])]
+var productList = [Product(name: "Top 1", image: "top1_0", price: 45, colors: [UIColor(rgb: 0xFFFFFF), UIColor.blue]),
+                   Product(name: "Top 2", image: "top1_1", price: 45, colors: [UIColor.blue, UIColor.blue]),
+                   Product(name: "Top 3", image: "top1_2", price: 45, colors: [UIColor.blue, UIColor.blue])]
 

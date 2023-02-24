@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProductCard: View {
     var product: Product
-    
+        
     var body: some View {
         VStack(alignment: .leading) {
             Image(product.image)
@@ -35,11 +35,9 @@ struct ProductCard: View {
             
             HStack {
                 ForEach(product.colors, id: \.self) { color in
-                    
-//                    ColorDotView(color: Color(0xFc855d))
-                    
+                                                            
                     Circle()
-                        .fill(Color(0xFc855d))
+                        .fill(Color(color))
                         .frame(width: 10, height: 10)
                 }
 
@@ -48,15 +46,6 @@ struct ProductCard: View {
         .frame(width: 180, height: 340)
     }
 }
-
-//struct ColorDotView: View {
-//    let color: Color
-//    var body: some View {
-//        color
-//            .frame(width: 10, height: 10)
-//            .clipShape(Circle())
-//    }
-//}
 
 struct ProductCard_Previews: PreviewProvider {
     static var previews: some View {
