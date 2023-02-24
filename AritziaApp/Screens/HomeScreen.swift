@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct HomeScreen: View {
-        
     init() {
         UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "rische-demo", size: 30)!]
     }
@@ -84,7 +84,7 @@ struct CategoriesContainer: View {
             ScrollView (.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(categoryList, id: \.id) { category in
-                        NavigationLink(destination: ProductsScreen(),
+                        NavigationLink(destination: ProductsScreen(itemsList: productList),
                                        label: { CategoryCard(category: category)}
                         )
                         .foregroundColor(.black)
@@ -99,6 +99,7 @@ struct CategoriesContainer: View {
 
 struct TrendingItemsContainer: View {
     var body: some View {
+        
         VStack {
             Text("TRENDING")
                 .font(.custom("Poppins-Regular", size: 18))

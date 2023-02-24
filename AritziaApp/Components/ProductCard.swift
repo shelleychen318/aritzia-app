@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ProductCard: View {
-    // var categoryChoice: String
     @State var isPressed : Bool = false
+//    var categoryChoice: String
     var product: Product
         
     var body: some View {
