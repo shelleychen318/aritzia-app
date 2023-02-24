@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TrendingItemCard: View {
+    @State var isPressed : Bool = false
     var trendingItem: TrendingItem
     
     var body: some View {
@@ -16,14 +17,15 @@ struct TrendingItemCard: View {
                 .resizable()
                 .scaledToFit()
             
-            HStack (spacing: 0){
+            HStack {
                 Text(trendingItem.name)
                     .font(.custom("Poppins-Regular", size: 14))
                 
-                Button { }
-                label: {
-                    Image(systemName: "heart")
-                        .frame(maxWidth: .infinity, alignment: .trailing)
+                Spacer()
+                
+                Button (action: { self.isPressed.toggle()})
+                {
+                    Image(systemName: self.isPressed == true ? "heart.fill" : "heart")
                         .padding(0)
                         .foregroundColor(.black)
                         .font(.subheadline)
@@ -33,7 +35,7 @@ struct TrendingItemCard: View {
             Text("$\(trendingItem.price)")
                 .font(.custom("Poppins-Regular", size: 14))
         }
-        .frame(width: 180, height: 310)
+        .frame(width: 160, height: 270)
     }
 }
 

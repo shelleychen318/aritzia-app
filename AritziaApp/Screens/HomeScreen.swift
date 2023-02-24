@@ -57,7 +57,7 @@ struct ImageOverlay: View {
             Text("Shop Everyday Luxury")
                 .font(.custom("Poppins-SemiBold", size: 40))
                 .padding(24)
-                .position(x: 180, y: 500)
+                .position(x: 180, y: 470)
                 .foregroundColor(.white)
         }
     }
@@ -70,7 +70,7 @@ struct Banner: View {
             .aspectRatio(contentMode: .fill)
             .edgesIgnoringSafeArea(.all)
             .overlay(ImageOverlay())
-            .padding([.bottom], 50)
+            .padding([.bottom], 60)
     }
 }
 
@@ -89,8 +89,8 @@ struct CategoriesContainer: View {
                 }
             }
         }
-        .padding(.leading)
-        .padding([.bottom], 50)
+        .padding([.leading, .trailing])
+        .padding([.bottom], 60)
     }
 }
 
@@ -109,7 +109,7 @@ struct TrendingItemsContainer: View {
                 }
             }
         }
-        .padding(.leading)
+        .padding([.leading, .trailing])
         .padding([.bottom], 40)
     }
 }
