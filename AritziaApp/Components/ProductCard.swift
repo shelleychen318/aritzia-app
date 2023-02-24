@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProductCard: View {
     // var categoryChoice: String
+    @State var isPressed : Bool = false
     var product: Product
         
     var body: some View {
@@ -23,9 +24,9 @@ struct ProductCard: View {
                 
                 Spacer()
                 
-                Button { }
-                label: {
-                    Image(systemName: "heart")
+                Button (action: { self.isPressed.toggle()})
+                {
+                    Image(systemName: self.isPressed == true ? "heart.fill" : "heart")
                         .padding(0)
                         .foregroundColor(.black)
                         .font(.subheadline)
