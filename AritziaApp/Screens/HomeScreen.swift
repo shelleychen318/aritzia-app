@@ -110,6 +110,6 @@ struct TrendingItemsContainer: View {
             }
         }
         .padding(.leading)
-        .padding([.bottom], 40)
+        .padding([.bottom], 20)
     }
 }
