@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ProductCard: View {
     @State var isPressed : Bool = false
-//    var categoryChoice: String
     var product: Product
         
     var body: some View {
@@ -20,7 +19,7 @@ struct ProductCard: View {
             
             HStack (spacing: 0){
                 Text(product.name)
-                    .font(.custom("Poppins-Regular", size: 14))
+                    .font(.custom("Poppins-Regular", size: 13))
                 
                 Spacer()
                 
@@ -34,7 +33,7 @@ struct ProductCard: View {
             }
             
             Text("$\(product.price)")
-                .font(.custom("Poppins-Regular", size: 14))
+                .font(.custom("Poppins-Regular", size: 13))
             
             HStack {
                 ForEach(product.colors, id: \.self) { color in
@@ -47,14 +46,12 @@ struct ProductCard: View {
 
             }
         }
-        .frame(width: 180, height: 340)
+        .frame(width: 170, height: 320)
     }
 }
 
 struct ProductCard_Previews: PreviewProvider {
     static var previews: some View {
-        //if statement to control which productList gets displayed according to category selection
-        
-        ProductCard(product: productList[0])
+        ProductCard(product: topsList[2])
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 struct HomeScreen: View {
     init() {
-        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "rische-demo", size: 30)!]
+        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "rische-demo", size:30)!]
     }
     
     var body: some View {
@@ -84,7 +84,7 @@ struct CategoriesContainer: View {
             ScrollView (.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(categoryList, id: \.id) { category in
-                        NavigationLink(destination: ProductsScreen(itemsList: productList),
+                        NavigationLink(destination: ProductsScreen(categoryName: category.name, itemsList: topsList),
                                        label: { CategoryCard(category: category)}
                         )
                         .foregroundColor(.black)
