@@ -13,6 +13,7 @@ struct HomeView: View {
         UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "rische-demo", size:30)!]
     }
     
+    
     var body: some View {
         NavigationView {
             ScrollView (showsIndicators: false) {
@@ -75,6 +76,8 @@ struct Banner: View {
 }
 
 struct CategoriesContainer: View {
+    @State private var isActive: Bool = false
+    
     var body: some View {
         VStack {
             Text("SHOP BY CATEGORY")
@@ -84,10 +87,10 @@ struct CategoriesContainer: View {
             ScrollView (.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(categoryList, id: \.id) { category in
-                        NavigationLink(destination: ProductsView(categoryName: category.name, itemsList: topsList),
+                        NavigationLink(destination: ProductsView(categoryName: category.name, itemsList: topsList), 
                                        label: { CategoryCard(category: category)}
                         )
-                        .foregroundColor(.black)
+//                        .foregroundColor(.black)
                     }
                 }
             }

@@ -9,17 +9,25 @@ import SwiftUI
 
 struct ProductsView: View {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     var columns = [GridItem(.adaptive(minimum: 160), spacing: 10)]
     var categoryName : String = ""
     var itemsList : [Product] = topsList
+    
+    // overwrite default back button text
+    var btnBack : some View { Button(action: {
+        self.presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack {
+            Image(systemName: "chevron.backward")
+                .aspectRatio(contentMode: .fit)
+            }
+        }
+    }
 
-//    init() {
-//        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "Poppins-Regular", size: 20)!]
-//
-//    }
 
     var body: some View {
-//        NavigationView {
         VStack {
             ScrollView (showsIndicators: false) {
                 Text(categoryName)
@@ -33,27 +41,17 @@ struct ProductsView: View {
                     }
                 }
                 .padding([.top], 5)
-                
             }
             .navigationTitle("ARITZIA")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: btnBack)
             .toolbar {
                 ToolbarItem {
                     Image(systemName: "bag")
                         .font(.title3)
                 }
             }
-//                        .toolbar {
-//                            ToolbarItem(placement: .bottomBar) {
-//                                HStack(spacing: 90) {
-//                                    Image(systemName: "house.fill")
-//                                    Image(systemName: "heart")
-//                                    Image(systemName: "person")
-//                                }
-//                                .font(.title3)
-//                            }
-//                        }
-                    
         }
         .padding([.leading, .trailing])
     }
