@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-struct HomeScreen: View {
+struct HomeView: View {
     init() {
         UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "rische-demo", size:30)!]
     }
@@ -31,23 +31,23 @@ struct HomeScreen: View {
                         .font(.title3)
                 }
             }
-            .toolbar {
-                ToolbarItem(placement: .bottomBar) {
-                    HStack(spacing: 90) {
-                        Image(systemName: "house.fill")
-                        Image(systemName: "heart")
-                        Image(systemName: "person")
-                    }
-                    .font(.title3)
-                }
-            }
+//            .toolbar {
+//                ToolbarItem(placement: .bottomBar) {
+//                    HStack(spacing: 90) {
+//                        Image(systemName: "house.fill")
+//                        Image(systemName: "heart")
+//                        Image(systemName: "person")
+//                    }
+//                    .font(.title3)
+//                }
+//            }
         }
     }
 }
 
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
-        HomeScreen()
+        HomeView()
     }
 }
 
@@ -84,7 +84,7 @@ struct CategoriesContainer: View {
             ScrollView (.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(categoryList, id: \.id) { category in
-                        NavigationLink(destination: ProductsScreen(categoryName: category.name, itemsList: topsList),
+                        NavigationLink(destination: ProductsView(categoryName: category.name, itemsList: topsList),
                                        label: { CategoryCard(category: category)}
                         )
                         .foregroundColor(.black)

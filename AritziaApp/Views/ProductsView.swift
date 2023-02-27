@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProductsScreen: View {
+struct ProductsView: View {
     
     var columns = [GridItem(.adaptive(minimum: 160), spacing: 10)]
     var categoryName : String = ""
@@ -61,6 +61,6 @@ struct ProductsScreen: View {
 
 struct ProductsScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ProductsScreen()
+        ProductsView()
     }
 }
