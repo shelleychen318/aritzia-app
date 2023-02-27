@@ -13,7 +13,7 @@ struct ProductCard: View {
         
     var body: some View {
         VStack(alignment: .leading) {
-            Image(product.image)
+            Image(product.image0)
                 .resizable()
                 .scaledToFit()
             
@@ -41,7 +41,7 @@ struct ProductCard: View {
                     Circle()
                         .fill(Color(color))
                         .frame(width: 10, height: 10)
-                        .overlay(Circle().stroke(Color.black))
+                        .overlay(Circle().stroke(Color.gray))
                 }
 
             }

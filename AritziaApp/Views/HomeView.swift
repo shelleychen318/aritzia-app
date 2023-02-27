@@ -32,16 +32,6 @@ struct HomeView: View {
                         .font(.title3)
                 }
             }
-//            .toolbar {
-//                ToolbarItem(placement: .bottomBar) {
-//                    HStack(spacing: 90) {
-//                        Image(systemName: "house.fill")
-//                        Image(systemName: "heart")
-//                        Image(systemName: "person")
-//                    }
-//                    .font(.title3)
-//                }
-//            }
         }
     }
 }
@@ -90,7 +80,6 @@ struct CategoriesContainer: View {
                         NavigationLink(destination: ProductsView(categoryName: category.name, itemsList: topsList), 
                                        label: { CategoryCard(category: category)}
                         )
-//                        .foregroundColor(.black)
                     }
                 }
             }
