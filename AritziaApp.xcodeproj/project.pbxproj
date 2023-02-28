@@ -21,6 +21,7 @@
 		7AB4989D29AD525E002D9414 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB4989C29AD525E002D9414 /* WishListView.swift */; };
 		7AB4989F29AD540C002D9414 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB4989E29AD540C002D9414 /* ProfileView.swift */; };
 		7AB498A129AD64B9002D9414 /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB498A029AD64B9002D9414 /* ProductDetailsView.swift */; };
+		7AB498A729AE6052002D9414 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB498A629AE6052002D9414 /* BackButton.swift */; };
 		7ABF1D2C29A19A41001EC71C /* AritziaAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF1D2B29A19A41001EC71C /* AritziaAppApp.swift */; };
 		7ABF1D2E29A19A41001EC71C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF1D2D29A19A41001EC71C /* ContentView.swift */; };
 		7ABF1D3029A19A43001EC71C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ABF1D2F29A19A43001EC71C /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		7AB4989C29AD525E002D9414 /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
 		7AB4989E29AD540C002D9414 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		7AB498A029AD64B9002D9414 /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
+		7AB498A629AE6052002D9414 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		7ABF1D2829A19A41001EC71C /* AritziaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AritziaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ABF1D2B29A19A41001EC71C /* AritziaAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AritziaAppApp.swift; sourceTree = "<group>"; };
 		7ABF1D2D29A19A41001EC71C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				7A09F6BA29A8031400B4A582 /* CategoryCard.swift */,
 				7A09F6C029A80E0700B4A582 /* TrendingItemCard.swift */,
 				7A09F6C629A83BB800B4A582 /* ProductCard.swift */,
+				7AB498A629AE6052002D9414 /* BackButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				7A09F6C329A813EE00B4A582 /* TrendingItem.swift in Sources */,
 				7A09F6BB29A8031400B4A582 /* CategoryCard.swift in Sources */,
 				7AB4989D29AD525E002D9414 /* WishListView.swift in Sources */,
+				7AB498A729AE6052002D9414 /* BackButton.swift in Sources */,
 				7A09F6CA29A84A1700B4A582 /* Extensions.swift in Sources */,
 				7A09F6C729A83BB800B4A582 /* ProductCard.swift in Sources */,
 				7ABF1D2C29A19A41001EC71C /* AritziaAppApp.swift in Sources */,

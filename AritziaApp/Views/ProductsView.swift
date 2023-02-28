@@ -8,24 +8,10 @@
 import SwiftUI
 
 struct ProductsView: View {
-    
     var categoryName : String = ""
     var itemsList : [Product] = topsList
     
     var columns = [GridItem(.adaptive(minimum: 160), spacing: 10)]
-    
-    // overwrite default back button text
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
-    var btnBack : some View { Button(action: {
-        self.presentationMode.wrappedValue.dismiss()
-        }) {
-            HStack {
-            Image(systemName: "chevron.backward")
-                .aspectRatio(contentMode: .fit)
-            }
-        }
-    }
 
     var body: some View {
         VStack {
@@ -45,7 +31,7 @@ struct ProductsView: View {
                 .padding([.top], 5)
             }
             .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: btnBack)
+            .navigationBarItems(leading: BackButton())
             .navigationTitle("ARITZIA")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

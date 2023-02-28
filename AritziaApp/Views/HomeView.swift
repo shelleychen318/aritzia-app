@@ -65,8 +65,6 @@ struct Banner: View {
 }
 
 struct CategoriesContainer: View {
-    @State private var isActive: Bool = false
-    
     var body: some View {
         VStack {
             Text("SHOP BY CATEGORY")
@@ -90,7 +88,6 @@ struct CategoriesContainer: View {
 
 struct TrendingItemsContainer: View {
     var body: some View {
-        
         VStack {
             Text("TRENDING")
                 .font(.custom("Poppins-Regular", size: 18))
