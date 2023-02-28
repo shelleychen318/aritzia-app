@@ -7,9 +7,21 @@
 
 import SwiftUI
 
-struct ProductDetailsCard: View {
+struct ProductDetailsView: View {
     var product: Product
-    //    var productColors: ProductColorsCard
+    
+    // overwrite default back button text
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
+    var btnBack : some View { Button(action: {
+        self.presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack {
+            Image(systemName: "chevron.backward")
+                .aspectRatio(contentMode: .fit)
+            }
+        }
+    }
     
     var body: some View {
         VStack (alignment: .leading){
@@ -28,7 +40,8 @@ struct ProductDetailsCard: View {
                 }
                 .padding(.bottom, 5)
             }
-            VStack (alignment: .leading){
+            
+            VStack (alignment: .leading) {
                 HStack {
                     Text(product.name)
                         .font(.custom("Poppins-Regular", size: 18))
@@ -39,8 +52,10 @@ struct ProductDetailsCard: View {
                         .font(.custom("Poppins-Regular", size: 18))
                 }
                 .padding(.bottom, 25)
+                
                 Text("Colors")
                     .font(.custom("Poppins-Regular", size: 14))
+                
                 HStack {
                     ForEach(product.colors, id: \.self) { color in
                         Circle()
@@ -55,11 +70,14 @@ struct ProductDetailsCard: View {
             //            }
         }
         .frame(width: 380, height: 600)
+        .toolbar(.hidden, for: .tabBar)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: btnBack)
     }
 }
 
-struct ProductDetailsCard_Previews: PreviewProvider {
+struct ProductDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetailsCard(product: topsList[1])
+        ProductDetailsView(product: topsList[1])
     }
 }

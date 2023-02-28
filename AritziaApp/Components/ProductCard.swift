@@ -37,13 +37,11 @@ struct ProductCard: View {
             
             HStack {
                 ForEach(product.colors, id: \.self) { color in
-                                                            
                     Circle()
                         .fill(Color(color))
                         .frame(width: 10, height: 10)
                         .overlay(Circle().stroke(Color.gray))
                 }
-
             }
         }
         .frame(width: 170, height: 320)

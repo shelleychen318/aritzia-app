@@ -13,7 +13,6 @@ struct HomeView: View {
         UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "rische-demo", size:30)!]
     }
     
-    
     var body: some View {
         NavigationView {
             ScrollView (showsIndicators: false) {

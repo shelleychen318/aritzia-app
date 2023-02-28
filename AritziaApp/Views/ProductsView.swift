@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ProductsView: View {
     
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
-    var columns = [GridItem(.adaptive(minimum: 160), spacing: 10)]
     var categoryName : String = ""
     var itemsList : [Product] = topsList
     
+    var columns = [GridItem(.adaptive(minimum: 160), spacing: 10)]
+    
     // overwrite default back button text
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     var btnBack : some View { Button(action: {
         self.presentationMode.wrappedValue.dismiss()
         }) {
@@ -37,7 +38,9 @@ struct ProductsView: View {
                 
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(itemsList, id: \.id) { product in
-                        ProductCard(product: product)
+                        NavigationLink(destination: ProductDetailsView(product: product),
+                                       label: { ProductCard(product: product)}
+                        )
                     }
                 }
                 .padding([.top], 5)

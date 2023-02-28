@@ -23,8 +23,7 @@ struct TrendingItemCard: View {
                 
                 Spacer()
                 
-                Button (action: { self.isPressed.toggle()})
-                {
+                Button (action: { self.isPressed.toggle()}) {
                     Image(systemName: self.isPressed == true ? "heart.fill" : "heart")
                         .padding(0)
                         .foregroundColor(.black)
