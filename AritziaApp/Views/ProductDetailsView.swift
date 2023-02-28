@@ -70,6 +70,14 @@ struct ProductDetailsView: View {
             //            }
         }
         .frame(width: 380, height: 600)
+        .navigationTitle("ARITZIA")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem {
+                Image(systemName: "bag")
+                    .font(.title3)
+            }
+        }
         .toolbar(.hidden, for: .tabBar)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: btnBack)
