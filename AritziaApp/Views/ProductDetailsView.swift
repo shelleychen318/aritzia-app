@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProductDetailsView: View {
     var product: Product
-    
+        
     // overwrite default back button text
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
@@ -24,52 +24,56 @@ struct ProductDetailsView: View {
     }
     
     var body: some View {
-        VStack (alignment: .leading){
-            //            ScrollView (showsIndicators: false) {
-            ScrollView (.horizontal, showsIndicators: false) {
-                HStack (spacing: 0) {
-                    Image(product.image0)
-                        .resizable()
-                        .scaledToFit()
-                    Image(product.image1)
-                        .resizable()
-                        .scaledToFit()
-                    Image(product.image2)
-                        .resizable()
-                        .scaledToFit()
-                }
-                .padding(.bottom, 5)
-            }
-            
-            VStack (alignment: .leading) {
-                HStack {
-                    Text(product.name)
-                        .font(.custom("Poppins-Regular", size: 18))
-                    
-                    Spacer()
-                    
-                    Text("$\(product.price)")
-                        .font(.custom("Poppins-Regular", size: 18))
-                }
-                .padding(.bottom, 25)
-                
-                Text("Colors")
-                    .font(.custom("Poppins-Regular", size: 14))
-                
-                HStack {
-                    ForEach(product.colors, id: \.self) { color in
-                        Circle()
-                            .fill(Color(color))
-                            .frame(width: 25, height: 25)
-                            .overlay(Circle().stroke(Color.gray))
-                            .padding(.trailing)
+        VStack (alignment: .leading) {
+            ScrollView (showsIndicators: false) {
+                VStack {
+                    ScrollView (.horizontal, showsIndicators: false) {
+                        HStack (spacing: 0) {
+                            Image(product.image0)
+                                .resizable()
+                                .scaledToFit()
+                            Image(product.image1)
+                                .resizable()
+                                .scaledToFit()
+                            Image(product.image2)
+                                .resizable()
+                                .scaledToFit()
+                        }
+                        .padding(.bottom, 5)
                     }
+                    
+                    VStack (alignment: .leading) {
+                        HStack {
+                            Text(product.name)
+                                .font(.custom("Poppins-Regular", size: 18))
+                            
+                            Spacer()
+                            
+                            Text("$\(product.price)")
+                                .font(.custom("Poppins-Regular", size: 18))
+                        }
+                        .padding(.bottom, 25)
+                        
+                        Text("Colors")
+                            .font(.custom("Poppins-Regular", size: 14))
+                        
+                        HStack {
+                            ForEach(product.colors, id: \.self) { color in
+                                Circle()
+                                    .fill(Color(color))
+                                    .frame(width: 25, height: 25)
+                                    .overlay(Circle().stroke(Color.gray))
+                                    .padding(.trailing)
+                            }
+                        }
+                    }
+                    .padding([.leading, .trailing], 15)
                 }
+                .frame(width: 380, height: 630)
             }
-            .padding([.leading, .trailing], 15)
-            //            }
         }
-        .frame(width: 380, height: 600)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: btnBack)
         .navigationTitle("ARITZIA")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -79,8 +83,6 @@ struct ProductDetailsView: View {
             }
         }
         .toolbar(.hidden, for: .tabBar)
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: btnBack)
     }
 }
 

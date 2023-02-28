@@ -34,3 +34,28 @@ struct MainView_Previews: PreviewProvider {
         MainView()
     }
 }
+
+//struct TopNavbarContainer<Content: View>: View {
+//
+//    let content: Content
+//
+//        init(@ViewBuilder content: () -> Content) {
+//            self.content = content()
+//        }
+//
+//    var body: some View {
+//        NavigationView {
+//            ScrollView (showsIndicators: false) {
+//                self.content
+//            }
+//        }
+//        .navigationTitle("ARITZIA")
+//        .navigationBarTitleDisplayMode(.inline)
+//        .toolbar {
+//            ToolbarItem {
+//                Image(systemName: "bag")
+//                    .font(.title3)
+//            }
+//        }
+//    }
+//}

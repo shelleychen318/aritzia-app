@@ -27,7 +27,6 @@ struct ProductsView: View {
         }
     }
 
-
     var body: some View {
         VStack {
             ScrollView (showsIndicators: false) {
@@ -45,10 +44,10 @@ struct ProductsView: View {
                 }
                 .padding([.top], 5)
             }
-            .navigationTitle("ARITZIA")
-            .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: btnBack)
+            .navigationTitle("ARITZIA")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem {
                     Image(systemName: "bag")
