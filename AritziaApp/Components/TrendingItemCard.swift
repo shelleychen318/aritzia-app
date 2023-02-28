@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TrendingItemCard: View {
-    @State var isPressed : Bool = false
     var trendingItem: TrendingItem
     
     var body: some View {
@@ -23,12 +22,7 @@ struct TrendingItemCard: View {
                 
                 Spacer()
                 
-                Button (action: { self.isPressed.toggle()}) {
-                    Image(systemName: self.isPressed == true ? "heart.fill" : "heart")
-                        .padding(0)
-                        .foregroundColor(.black)
-                        .font(.subheadline)
-                }
+                HeartButton()
             }
             
             Text("$\(trendingItem.price)")

@@ -10,19 +10,6 @@ import SwiftUI
 struct ProductDetailsView: View {
     var product: Product
         
-//    // overwrite default back button text
-//    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-//
-//    var btnBack : some View { Button(action: {
-//        self.presentationMode.wrappedValue.dismiss()
-//        }) {
-//            HStack {
-//            Image(systemName: "chevron.backward")
-//                .aspectRatio(contentMode: .fit)
-//            }
-//        }
-//    }
-    
     var body: some View {
             ScrollView (showsIndicators: false) {
                 VStack {
@@ -70,17 +57,17 @@ struct ProductDetailsView: View {
                 }
                 .frame(width: 380, height: 630)
             }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: BackButton())
-        .navigationTitle("ARITZIA")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem {
-                Image(systemName: "bag")
-                    .font(.title3)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: BackButton())
+            .navigationTitle("ARITZIA")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem {
+                    Image(systemName: "bag")
+                        .font(.title3)
+                }
             }
-        }
-        .toolbar(.hidden, for: .tabBar)
+            .toolbar(.hidden, for: .tabBar)
     }
 }
 

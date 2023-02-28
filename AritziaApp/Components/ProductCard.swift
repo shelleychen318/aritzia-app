@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ProductCard: View {
-    @State var isPressed : Bool = false
     var product: Product
         
     var body: some View {
@@ -23,13 +22,7 @@ struct ProductCard: View {
                 
                 Spacer()
                 
-                Button (action: { self.isPressed.toggle()})
-                {
-                    Image(systemName: self.isPressed == true ? "heart.fill" : "heart")
-                        .padding(0)
-                        .foregroundColor(.black)
-                        .font(.subheadline)
-                }
+                HeartButton()
             }
             
             Text("$\(product.price)")

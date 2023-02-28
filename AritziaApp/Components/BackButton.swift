@@ -7,20 +7,16 @@
 
 import SwiftUI
 
+// overwrite default back button text
 struct BackButton: View {
-    
-    // overwrite default back button text
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
-        Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-        }) {
+        Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
             HStack {
                 Image(systemName: "chevron.backward")
                     .aspectRatio(contentMode: .fit)
             }
-            
         }
     }
 }
