@@ -74,11 +74,9 @@ struct CategoriesContainer: View {
             ScrollView (.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(categoryList, id: \.id) { category in
-                        
-                        let thisList = getCategory(category: category.name)
-                        
-                        NavigationLink(destination: ProductsView(categoryName: category.name, itemsList: thisList),
-                                       label: { CategoryCard(category: category)}
+                                                
+                        NavigationLink(destination: ProductsView(categoryName: category.name, itemsList: getCategory(category: category.name)),
+                                       label: { CategoryCard(category: category) }
                         )
                     }
                 }
@@ -92,7 +90,7 @@ struct CategoriesContainer: View {
 struct TrendingItemsContainer: View {
     var body: some View {
         VStack {
-            Text("TRENDING")
+            Text("TRENDING NOW")
                 .font(.custom("Poppins-Regular", size: 18))
                 .frame(maxWidth: .infinity, alignment: .leading)
             
@@ -109,6 +107,7 @@ struct TrendingItemsContainer: View {
     }
 }
 
+// dynamically generate product pages based on the selected category
 func getCategory(category: String) -> [Product] {
     if category == categoryList[0].name {
         return topsList

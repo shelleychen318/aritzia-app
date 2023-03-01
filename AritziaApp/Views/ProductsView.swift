@@ -24,7 +24,7 @@ struct ProductsView: View {
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(itemsList, id: \.id) { product in
                         NavigationLink(destination: ProductDetailsView(product: product),
-                                       label: { ProductCard(product: product)}
+                                       label: { ProductCard(product: product) }
                         )
                     }
                 }
