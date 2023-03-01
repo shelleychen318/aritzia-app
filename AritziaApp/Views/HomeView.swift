@@ -74,7 +74,10 @@ struct CategoriesContainer: View {
             ScrollView (.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(categoryList, id: \.id) { category in
-                        NavigationLink(destination: ProductsView(categoryName: category.name, itemsList: topsList), 
+                        
+                        let thisList = getCategory(category: category.name)
+                        
+                        NavigationLink(destination: ProductsView(categoryName: category.name, itemsList: thisList),
                                        label: { CategoryCard(category: category)}
                         )
                     }
@@ -103,5 +106,14 @@ struct TrendingItemsContainer: View {
         }
         .padding([.leading, .trailing])
         .padding([.bottom], 40)
+    }
+}
+
+func getCategory(category: String) -> [Product] {
+    if category == categoryList[0].name {
+        return topsList
+    }
+    else {
+        return pantsList
     }
 }

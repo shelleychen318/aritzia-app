@@ -27,4 +27,4 @@ var topsList = [Product(name: "Soho Longsleeve", image0: "top1_0", image1: "top1
                 Product(name: "Contour Cami", image0: "top7_0", image1: "top7_1", image2: "top7_2", price: 38, colors: [UIColor(rgb: 0xeae5d9), UIColor(rgb: 0xdbe4e4), UIColor(rgb: 0x513e30)]),
                 Product(name: "Pegasus T-Shirt", image0: "top8_0", image1: "top8_1", image2: "top8_2", price: 40, colors: [UIColor(rgb: 0xFFFFFF), UIColor(rgb: 0x99b4bf), UIColor(rgb: 0xa68c78), UIColor(rgb: 0x307bcc)])]
 
-//var pantsList = [Product]
+var pantsList = [Product(name: "Soho Longsleeve", image0: "top1_0", image1: "top1_1", image2: "top1_2", price: 45, colors: [UIColor(rgb: 0xFFFFFF), UIColor(rgb: 0xfc855d)])]
