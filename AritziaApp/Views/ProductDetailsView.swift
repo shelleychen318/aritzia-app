@@ -15,15 +15,13 @@ struct ProductDetailsView: View {
                 VStack {
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack (spacing: 0) {
-                            Image(product.image0)
-                                .resizable()
-                                .scaledToFit()
-                            Image(product.image1)
-                                .resizable()
-                                .scaledToFit()
-                            Image(product.image2)
-                                .resizable()
-                                .scaledToFit()
+                            
+                            ForEach(product.images, id: \.self) { image in
+                                Image(image)
+                                    .resizable()
+                                    .scaledToFit()
+                            }
+                            
                         }
                         .padding(.bottom, 5)
                     }
