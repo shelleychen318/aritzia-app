@@ -35,7 +35,9 @@ struct ProductsView: View {
             .navigationTitle("ARITZIA")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem {
+                NavigationLink {
+                    BagView()
+                } label: {
                     BagButton(numberOfItems: 1)
                         .padding(.bottom, 10)
                 }
