@@ -36,8 +36,8 @@ struct ProductsView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem {
-                    Image(systemName: "bag")
-                        .font(.title3)
+                    BagButton(numberOfItems: 1)
+                        .padding(.bottom, 10)
                 }
             }
         }
