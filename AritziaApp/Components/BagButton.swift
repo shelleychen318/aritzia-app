@@ -14,7 +14,6 @@ struct BagButton: View {
         ZStack(alignment: .topTrailing) {
             Image(systemName: "bag")
                 .font(.title3)
-//                .padding([.top, .trailing], 3)
             
             if numberOfItems > 0 {
                 Text("\(numberOfItems)")
