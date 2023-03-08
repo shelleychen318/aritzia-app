@@ -8,10 +8,6 @@
 import SwiftUI
 
 struct ProductDetailsView: View {
-//    @StateObject var bagIcon = BagViewModel() // instantiate instance of BagViewModel to update bag icon
-//
-//    @EnvironmentObject var bagItems: BagViewModel // adds items to bag
-    
     @StateObject var bag = BagViewModel()
     
     var product: Product

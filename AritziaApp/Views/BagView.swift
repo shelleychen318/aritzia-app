@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BagView: View {
-    @EnvironmentObject var bag: BagViewModel // share bag data with this view
+    @EnvironmentObject var bag: BagViewModel // import bag data into this view
 
     var body: some View {
         VStack {
