@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BagView: View {
+    @EnvironmentObject var bag: BagViewModel // share bag data with this view
+
     var body: some View {
         VStack {
             ScrollView (showsIndicators: false) {
@@ -33,5 +35,6 @@ struct BagView: View {
 struct BagView_Previews: PreviewProvider {
     static var previews: some View {
         BagView()
+            .environmentObject(BagViewModel())
     }
 }

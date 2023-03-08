@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProductsView: View {
+    @StateObject var bag = BagViewModel()
+    
     var categoryName : String
     var itemsList : [Product]
     
@@ -38,7 +40,7 @@ struct ProductsView: View {
                 NavigationLink {
                     BagView()
                 } label: {
-                    BagButton(numberOfItems: 1)
+                    BagButton(numberOfItems: bag.products.count)
                         .padding(.bottom, 10)
                 }
             }

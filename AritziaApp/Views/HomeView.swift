@@ -9,6 +9,8 @@ import SwiftUI
 import UIKit
 
 struct HomeView: View {
+    @StateObject var bag = BagViewModel()
+
     init() {
         UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "rische-demo", size:30)!]
     }
@@ -29,7 +31,7 @@ struct HomeView: View {
                 NavigationLink {
                     BagView()
                 } label: {
-                    BagButton(numberOfItems: 1)
+                    BagButton(numberOfItems: bag.products.count)
                         .padding(.bottom, 10)
                 }
             }

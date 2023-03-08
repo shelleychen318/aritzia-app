@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProductCard: View {
+struct ProductCard: View {    
     var product: Product
         
     var body: some View {

@@ -17,6 +17,8 @@
 		7A09F6C729A83BB800B4A582 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A09F6C629A83BB800B4A582 /* ProductCard.swift */; };
 		7A09F6CA29A84A1700B4A582 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A09F6C929A84A1700B4A582 /* Extensions.swift */; };
 		7A09F6CC29A9189D00B4A582 /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A09F6CB29A9189D00B4A582 /* ProductsView.swift */; };
+		7A4476CD29B92D06006BFDF6 /* BagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4476CC29B92D06006BFDF6 /* BagViewModel.swift */; };
+		7A4476CF29B93B5E006BFDF6 /* ProductDetailsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4476CE29B93B5E006BFDF6 /* ProductDetailsCard.swift */; };
 		7AB4989B29AD519F002D9414 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB4989A29AD519F002D9414 /* MainView.swift */; };
 		7AB4989D29AD525E002D9414 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB4989C29AD525E002D9414 /* WishListView.swift */; };
 		7AB4989F29AD540C002D9414 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB4989E29AD540C002D9414 /* ProfileView.swift */; };
@@ -45,6 +47,8 @@
 		7A09F6C629A83BB800B4A582 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 		7A09F6C929A84A1700B4A582 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7A09F6CB29A9189D00B4A582 /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
+		7A4476CC29B92D06006BFDF6 /* BagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagViewModel.swift; sourceTree = "<group>"; };
+		7A4476CE29B93B5E006BFDF6 /* ProductDetailsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsCard.swift; sourceTree = "<group>"; };
 		7AB4989A29AD519F002D9414 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7AB4989C29AD525E002D9414 /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
 		7AB4989E29AD540C002D9414 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -94,8 +98,17 @@
 				7AB498A629AE6052002D9414 /* BackButton.swift */,
 				7AB498A829AE67E4002D9414 /* HeartButton.swift */,
 				7AB498AA29B6A238002D9414 /* BagButton.swift */,
+				7A4476CE29B93B5E006BFDF6 /* ProductDetailsCard.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		7A4476CB29B92CBB006BFDF6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7A4476CC29B92D06006BFDF6 /* BagViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		7ABF1D1F29A19A41001EC71C = {
@@ -118,8 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				7A09F6B629A8013800B4A582 /* Models */,
-				7A09F6B929A802FB00B4A582 /* Components */,
+				7A4476CB29B92CBB006BFDF6 /* ViewModels */,
 				7ABF1D3929A1E384001EC71C /* Views */,
+				7A09F6B929A802FB00B4A582 /* Components */,
 				7ABF1D3C29A1EB34001EC71C /* Fonts */,
 				7ABF1D2D29A19A41001EC71C /* ContentView.swift */,
 				7ABF1D2B29A19A41001EC71C /* AritziaAppApp.swift */,
@@ -243,8 +257,10 @@
 				7AB4989B29AD519F002D9414 /* MainView.swift in Sources */,
 				7AB498A129AD64B9002D9414 /* ProductDetailsView.swift in Sources */,
 				7AB498AB29B6A238002D9414 /* BagButton.swift in Sources */,
+				7A4476CF29B93B5E006BFDF6 /* ProductDetailsCard.swift in Sources */,
 				7AB498AD29B6A7F8002D9414 /* BagView.swift in Sources */,
 				7A09F6C529A837D700B4A582 /* Product.swift in Sources */,
+				7A4476CD29B92D06006BFDF6 /* BagViewModel.swift in Sources */,
 				7ABF1D2E29A19A41001EC71C /* ContentView.swift in Sources */,
 				7A09F6C329A813EE00B4A582 /* TrendingItem.swift in Sources */,
 				7A09F6BB29A8031400B4A582 /* CategoryCard.swift in Sources */,

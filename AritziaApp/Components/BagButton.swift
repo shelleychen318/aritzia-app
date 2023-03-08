@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BagButton: View {
+struct BagButton: View {    
     var numberOfItems: Int
     
     var body: some View {
@@ -23,7 +23,6 @@ struct BagButton: View {
                     .background(.black)
                     .cornerRadius(50)
             }
-            
         }
     }
 }
