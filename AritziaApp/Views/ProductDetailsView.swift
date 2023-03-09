@@ -17,6 +17,7 @@ struct ProductDetailsView: View {
     var body: some View {
         ScrollView (showsIndicators: false) {
             ProductDetailsCard(product: product)
+                .environmentObject(bag)
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: BackButton())
@@ -25,6 +26,7 @@ struct ProductDetailsView: View {
         .toolbar {
             NavigationLink {
                 BagView()
+                    .environmentObject(bag)
             } label: {
                 BagButton(numberOfItems: bag.products.count)
                     .padding(.bottom, 10)

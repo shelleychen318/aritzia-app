@@ -30,6 +30,7 @@ struct HomeView: View {
             .toolbar {
                 NavigationLink {
                     BagView()
+                        .environmentObject(bag)
                 } label: {
                     BagButton(numberOfItems: bag.products.count)
                         .padding(.bottom, 10)
@@ -78,7 +79,6 @@ struct CategoriesContainer: View {
             ScrollView (.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(categoryList, id: \.id) { category in
-                                                
                         NavigationLink(destination: ProductsView(categoryName: category.name, itemsList: getCategory(category: category.name)),
                                        label: { CategoryCard(category: category) }
                         )

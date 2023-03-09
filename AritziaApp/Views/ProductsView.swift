@@ -39,6 +39,7 @@ struct ProductsView: View {
             .toolbar {
                 NavigationLink {
                     BagView()
+                        .environmentObject(bag)
                 } label: {
                     BagButton(numberOfItems: bag.products.count)
                         .padding(.bottom, 10)

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProductDetailsCard: View {
+    @EnvironmentObject var bag: BagViewModel
+    
     var product: Product
     
     var sizes = ["2XS", "XS", "S", "M", "L", "XL", "2XL"]
@@ -74,9 +76,8 @@ struct ProductDetailsCard: View {
                 .padding(.bottom, 40)
                 
                 HStack {
-                    Button
-                    {
-                        
+                    Button {
+                        bag.addToBag(product: product)
                     } label: {
                         Text("Add to bag")
                             .font(.custom("Poppins-Regular", size: 20))
@@ -105,5 +106,6 @@ struct ProductDetailsCard: View {
 struct ProductDetailsCard_Previews: PreviewProvider {
     static var previews: some View {
         ProductDetailsCard(product: topsList[1])
+            .environmentObject(BagViewModel())
     }
 }
