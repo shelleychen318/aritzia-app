@@ -7,5 +7,7 @@ Designs are inspired by the official [Aritzia website](https://www.aritzia.com/)
 ## Demo
 
 
-https://user-images.githubusercontent.com/110429840/221693423-4ce69a00-3e3a-4517-86a1-f081502f948a.mov
+https://user-images.githubusercontent.com/110429840/224102756-6f90ff01-d83a-4f29-9ec3-f109aaa32ea0.mov
+
+
 
